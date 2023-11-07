@@ -1,0 +1,1574 @@
+/*
+ARREGLAR COLORES (OPACIDAD DE LOS INPUT NO ES ASI, EN REALIDAD ES UN COLOR MAS CLARO)
+Y BOTON DE ACCEDER VER QUE COLOR VA
+
+HACER VARIABLES DE TODOS LOS COLORES
+*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Archivo Black');
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+.fondo{
+    background-image: url('../images/fondoLogin.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+}
+
+*{
+    border: none;
+    padding: 0;
+    margin: 0;
+    list-style:none;
+    text-decoration: none;
+    outline:none;
+}
+
+:root{
+    --primario: #5C9632;
+    --s1_primario: #416B24;
+    --s2_primario: #2C4918;
+    --s3_primario: #2E4020;
+
+    --l1_primario: #7DC34B;
+    --l2_primario: #9CD175;
+    --l3_primario: #B7DE9C;
+
+    --secundario: #797C76;
+    --s1_secundario: #696B66;
+    --s2_secundario: #424441;
+    --s3_secundario: #363636;
+
+    --l1_secundario: #DEDFDD;
+    --l2_secundario: #D1D1D0;
+    --l3_secundario: #D3EFC3;
+
+    --acento: #690011;
+    --neutro: #FFFFF2;
+
+    --tituloPrincipal: 'Nunito';
+    --tituloTerciario: 'Archivo black';
+    --textBotones: 'Roboto';
+}
+
+
+
+header {
+    display: flex;
+    flex-direction: row;
+    width: 94.2%;
+    height: 45px;
+    background-color: var(--s3_secundario);
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.header2{
+    display: flex;
+}
+
+.iconosHeader svg{
+    padding-right: 2px;
+    padding-left: 2px;
+}
+
+.buscar, .logoDescktop, .carouselCategorias, .categoriaFooter, .footerIconsDesktop , .footerIcons{
+    display: none;
+}
+
+/*
+CAROUSEL Y CARDS MOBILE
+*/
+
+@keyframes show {
+    from{
+        opacity: 0;
+        scale: 25%;
+    }
+    to{
+        opacity: 1;
+        scale: 100%;
+    }
+    
+}
+.carousel{
+    background-color: var(--s1_primario);
+    width: 97.1%;
+    height: 185px;
+    padding-left: 10px;
+}
+
+.carouselCategorias{
+    width: 98%;
+}
+
+.carousel h3{
+    font-family: var(--tituloPrincipal), sans-serif;
+    color: var(--l1_primario);
+    padding-bottom: 3px;
+}
+
+.carousel-container{
+    width: 100%;
+    display:flex;
+    overflow-x: scroll;
+    padding-bottom: 12px;  
+}
+
+.carousel-container2{
+    display:flex;
+    overflow-x: scroll;
+    padding-bottom: 12px;
+    height: 150px;
+}
+
+.carouselJuegosRelacionados{
+    display:flex;
+    padding-bottom: 12px;
+    height: 150px;
+    padding-top: 10px;
+}
+
+#icono {
+    transition: transform 0.3s ease-in-out;
+  }
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 3px 3px 3px var(--s1_secundario);
+    border-radius: 10px;
+    margin-right: 10px;   
+    background-color:var(--neutro);
+    
+}
+
+.card:hover {
+    opacity: 0.6;
+}
+
+.animacionScroll{
+    view-timeline-name: --image;
+    view-timeline-axis: inline;
+    animation-timeline: --image;
+	animation-name: show;
+
+	animation-range: entry 25% cover 40%;
+	animation-fill-mode: both;
+}
+
+.img-card{
+    width: 190px;
+    height: 110px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
+}
+
+.img-card:hover {
+    opacity: 0.8; 
+}
+
+.text-card {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;    
+    width: 100%;
+    height: 35px;     
+    font-family: var(--tituloTerciario); 
+    font-size: 15px;
+    color: var(--s2_secundario);
+}
+
+.containerCarrousel-mobile{
+    width:97.1%;
+    height: 145px;
+    background-color: var(--l1_primario);
+    border-top: 15px solid var(--neutro);
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+.containerCarrousel-mobile h6{
+    color: var(--s2_primario);
+    font-family: var(--tituloPrincipal), sans-serif;
+    font-size: 14px;
+}
+
+.cardMobile{
+    display: flex;
+    flex-direction: column;
+    width: 140px;
+    height: 110px;
+    box-shadow: 3px 3px 3px #828B79;
+    background-color: var(--neutro);
+    margin-left: 6px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.img-cardMobile{
+    width: 140px;
+    height: 75%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;  
+    transition: opacity 0.2s ease-in-out;
+    opacity: 1;
+}
+
+.img-cardMobile:hover {
+    opacity: 0.8; 
+}  
+
+
+.text-cardMobile{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+    height: 25%;
+    font-size: 11.5px;
+    font-family: var(--tituloTerciario); 
+    color: var(--s2_secundario);
+}
+
+.tituloCategorias{
+    display: flex;
+    width: 170px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-VerMas{
+    position: relative;
+    overflow: hidden;
+    border: 1.5px solid var(--secundario);
+    z-index:1;
+    border-radius: 9px;
+    width: 62px;
+    height: 20px;
+    font-size: 10px;
+    font-family: var(--textBotones) ;
+    font-weight: bold; 
+    color: var(--s3_secundario);
+}
+
+.btn-VerMas::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left:0;
+    top:-200%;
+    background-color: var(--secundario);
+    transition: all 0.4s ease;
+    border-radius: 50%;
+    z-index:-1;
+}
+
+.btn-VerMas:hover::before{
+    top:0;
+    border-radius:0%;
+}
+
+.footer2{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.footerIcons svg{
+    padding: 10px;
+}
+
+.footer3{
+    display: flex;
+    flex-direction: row;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-image: linear-gradient(to top, var(--s1_secundario) , var(--neutro) );
+    width: 100%;
+    height: 125px;
+    border-top: 15px solid var(--neutro);
+    padding-bottom: 10px;
+}
+
+
+
+.footerLinks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:var(--s2_secundario);
+}
+
+.footer h3{
+    font-family: var(--tituloPrincipal), sans-serif;
+    color: var(--s2_primario);
+    font-size: 16px;
+}
+
+.footer p{
+    font-family: var(--tituloPrincipal), sans-serif;
+    color: var(--s2_primario);
+    text-align: center;
+    font-size: 14px;
+}
+
+.formulario{
+    box-shadow: 5px 5px 5px #828B79;
+    display: flex;
+    flex-direction: row;
+    border-radius: 15px;
+    position: relative;
+    left: 30%;
+    margin-top: 2%;
+    background-color: var(--neutro);
+}
+
+.formLogin{
+    width: 550px;
+    height: 500px;
+}
+
+.imgForm{
+    padding: 0px;
+    width: 50%;  
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;   
+}
+
+form input{
+    background-color: var(--l2_secundario);
+}
+
+.textoForm{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    width: 50%;
+    height: 85%;
+    margin: 20px;
+    padding-bottom: 10px;
+    padding-top: 30px;
+    border-radius: 15px;
+    color: var(--s3_secundario);
+}
+
+.textoForm h2{
+    font-family: var(--textBotones);
+
+    font-size: 28px;
+}
+
+.campoCompletar{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    justify-content: space-between;
+}
+
+.ojoContraseña{
+    position: relative;
+    cursor:pointer;
+    display: inline-block;
+    cursor: pointer;
+}
+.ojoCerrado, .ojoAbierto, .ojoCerradoRepet, .ojoAbiertoRepet{
+    position: absolute;
+    top: 0.9px;
+    right: 5px;
+}
+.ojoContraseña input{
+    width: 100%;
+}
+.ojoCerrado, .ojoCerradoRepet{
+    display: block;
+}
+.ojoAbierto, .ojoAbiertoRepet{
+    display: none;
+}
+
+.cancel-button{
+    position: absolute;
+    top: 5px;
+    left: 96%;
+    background: transparent;
+    cursor: pointer;
+
+}
+.captcha {
+    background-color: #f0f0f0;
+    padding: 1px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 200px;
+}
+.captchaSignin{
+    width: 150px;
+}
+.captcha > div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 10px;
+}
+.captcha > div p{
+    margin-left: 10px;
+}
+.lineO{
+    position: absolute;
+    margin-top: 60px;
+}
+
+.sesionCon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 78%;
+    border-radius: 15px;
+    font-size: 10px;
+    height: 19px;
+    cursor: pointer;
+}
+.sesionCon >svg{
+    padding-right: 2%;
+}
+.face{
+    background-color: #3B5998;
+    color: var(--neutro);
+    border: 1px solid var(--l2_secundario);
+    cursor: pointer;
+}
+.google{
+    background-color: var(--neutro);
+    color: var(--s2_secundario);
+    border: 1px solid var(--s1_secundario);
+    cursor: pointer;
+}
+.acceder{
+    padding: 9px;
+    width: 110%;
+    border-radius: 15px;
+    margin-top: 20px;
+    background-color: var(--l2_secundario); 
+    cursor: pointer;   
+}
+
+.acceder a {
+    color: inherit;
+    width: 100px;
+}
+
+.juegosSimilares{
+    display: flex;
+    flex-direction:row ;
+
+}
+
+.linkRegistro{
+    display: flex;
+    flex-direction: row;
+    margin-top: 4px;
+    /*espacion entre ? y R*/
+}
+.textoFormSignin{
+    height: 90%;
+    border-radius: 15px;
+}
+.formSignin{
+    top: 10%;
+    border-radius: 15px;
+    width: 600px;
+    height: 600px;
+
+}
+.tituloForm{
+    text-align: center;
+}
+
+.popup{
+    width: 300px;
+    height: 300px;
+    padding: 30px 20px;
+    background: var(--neutro);
+    border-radius: 10px;
+    box-sizing: border-box;
+    z-index: 2;
+    text-align: center;
+    opacity:0;
+    transform: translate(-50%, -50%) scale(0.5);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    box-shadow: 5px 5px 5px #828B79;
+}
+
+.popup.active{
+    opacity:1;
+    transform: translate(-50%, -50%)scale(1);
+    transition: transform 300ms cubic-bezier(0.18,0.89,0.43,1.19);
+    transition: opacity 300ms ease-in-out,
+    top 1000ms ease-in-out, 
+    transform 1000ms ease-in-out;
+}
+
+.popup .icon{
+    margin:5px 0px;
+    width: 50px;
+    height: 50px;
+    border:2px solid var(--l1_primario);
+    text-align: center;
+    display: inline-block;
+    border-radius: 50%;
+    line-height: 60px;
+}
+
+.popup .icon i.fa{
+    font-size: 30px;
+    color: var(--s1_secundario);
+}
+
+.popup .title{
+    margin: 5px 0px;
+    color: var(--s1_secundario);
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.popup .descripcion{
+    color: var(--s1_secundario);
+    font-size: 15px;
+    padding: 5px;
+}
+
+.popup .dismiss-btn{
+    margin-top: 15px;
+    color: var(--secundario);
+}
+
+.popup .dismiss-btn button {
+    padding: 10px 20px;
+    background-color: var(--neutro);
+    border:2px solid var(--secundario);
+    font-size: 14px;
+    font-weight: 600;
+    outline: none;
+    border-radius: 10px;
+    transition: all 3000ms ease-in-out;
+    color: var(--s1_secundario);
+    cursor: pointer;
+}
+
+.popup .dismiss-btn button:hover{
+    color:var(--s1_secundario);
+    background-color: var(--secundario);
+}
+
+.popup > div{
+
+    opacity: 0;
+}
+
+.popup.active > div {
+    top:0px;
+    opacity: 1;
+}
+
+.popup.active .icon{
+    transition: all 200ms ease-in-out 150ms;
+
+}
+
+.popup.active .title{
+    transition: all 200ms ease-in-out 200ms;
+}
+
+.popup.active .descripcion{
+    transition: all 200ms ease-in-out 250ms;
+
+}
+
+.popup.active .dismiss-btn{
+    transition: all 200ms ease-in-out 300ms;
+}
+
+
+.hidden{
+    display: none;
+}
+
+.hidden2{
+    display: none;
+}
+
+#user{
+    list-style: none;
+    background-color: var(--s3_secundario);
+    position: absolute;
+    top: 40px;
+    right: 0;
+    z-index: 1000; 
+    width: 135px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+#user li{
+    color: var(--s1_secundario);
+    font-family: var(--tituloPrincipal);
+    font-size: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.userIcon{
+    cursor: pointer;
+}
+
+.menu-icon {
+    cursor: pointer;
+    fill: var(--neutro);
+    padding-right: 5px;
+}
+
+#menu {
+    list-style: none;
+    background-color: var(--s3_secundario);
+    padding: 10px;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    right: 0;
+    z-index: 1000; 
+    width: 126px;
+}
+
+#menu li {
+    margin: 10px 0;
+   
+}
+
+#menu a {
+    text-decoration: none;
+    color: var(--s1_secundario);
+    font-family: var(--tituloPrincipal);
+    font-size: 15px;
+    
+
+}
+
+.contenedor{
+    background-color: var(--neutro);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    transition: all 1.5s;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.loader, .loader:before, .loader:after{
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    animation: loader 1.5s infinite ease-in-out;
+}
+
+.loader{
+    color: var(--secundario);
+    position: relative;
+    top: 40%;
+    animation-delay: -0.16s;
+}
+
+.loader:before, .loader:after{
+    content:'';
+    position: absolute;
+    top:0;
+}
+
+.loader:before{
+    left:-3.5em;
+    animation-delay: -0.32s;
+}
+
+.loader:after{
+    left: 3.5em;
+}
+
+@keyframes loader{
+    0%,
+    80%,
+    100%{
+        box-shadow: 0 2.5em 0 -1.3em;
+    }
+    40%{
+        box-shadow: 0 2.5em 0 0;
+    }
+}
+
+.loader-inner {
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    animation: loader 5s infinite ease-in-out;
+    position: relative;
+    animation-delay: -0.16s;
+}
+
+.loader-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.telekino{
+    margin-top: 0.3%;
+    position: relative;
+}
+.xBoton{
+    position: absolute;
+    top: 9%;
+    left: 98.5%;
+    background: transparent;
+    cursor: pointer;
+}
+.fondoJuego{
+    width: 100%;
+    height: 1100px;
+    margin-top: 1px;
+    background-color: var(--s2_secundario);
+}
+.posDondeEstoy{
+    display: flex;
+    flex-direction: row;
+    padding-left: 10px;
+}
+.posDondeEstoy h3{
+    padding-right: 0.5%;
+    color: var(--s3_secundario);
+    font-family: var(--tituloPrincipal);
+}
+.cajaDelJuego{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1% 0% 1% 2%;
+    font-size: 20px;
+}
+
+.cajaDelJuego > div{
+    padding-left: 1%;
+    color: var(--l1_secundario);
+    font-family: var(--tituloPrincipal);
+}
+
+.juego{
+    display: flex;
+    justify-content: center;
+}
+.juego img {
+    border-radius: 15px;
+    filter: blur(2px);
+}
+
+.botonPlay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    border: 0;
+    width: 15%;
+    height: 200px;
+    border-radius: 150px;
+    cursor: pointer;
+    transition: .3s;
+    background-color: var(--primario);
+    position: absolute;
+}
+
+.botonPlay span{
+    margin-left: 30px;
+}
+.botonPlay:hover {
+    background-color: var(--s1_primario);
+    box-shadow: 5px 5px 10px hsla(0, 0%, 0%, 0.3);
+}
+button:active{
+    transform: scale(0.9);
+}
+.iconsJuego{
+    display: flex;
+    flex-direction: row;   
+    margin: 1% 0% 2% 0%;
+    width: 27%;
+    justify-content: space-between;
+    position: absolute;
+    right: 2.5%;
+}
+.iconsJuego > span{
+    width: 3px; 
+    height: 45px;
+    background-color: var(--neutro);     
+}
+/*pop up*/
+.instruccionJuego{
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    height: 250px;
+    width: 25%;
+    opacity: 0;
+    display: flex;
+    background-color: var(--acento);
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    pointer-events: none;
+    z-index: 9998;
+    top: 90%;
+    right: 10%;
+    border-radius: 15px;
+    
+}
+.textControls{
+    margin: 15%;
+    font-family: var(--tituloPrincipal);
+    color: var(--neutro);
+}
+.botonControls{
+    position: absolute;
+    top:1%;
+    right: 1%;
+    background: transparent;
+    cursor: pointer;
+}
+.botonInstruc{
+    cursor: pointer;
+}
+.mouse{
+    margin: 10%;
+    width: 30%;
+    height: 20%;
+}
+.show{
+    pointer-events: auto;
+    opacity: 1;
+}
+.corazon{
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    stroke: white;
+    transition: fill 1s ease; /* Transición suave para el cambio de color de relleno */
+    transition: stroke 0.1s ease; /* Transición suave para el cambio de color del borde */
+}
+
+.mg, .noMg, .extend{
+    cursor: pointer;
+}
+.fondoImgJuegos {
+    background-color: var(--s1_secundario);
+    width: 95%;
+    margin: auto;
+    height: 19%;
+    margin-top: 5.7%;
+    display: flex;
+   
+    justify-content: center;
+    padding: 2% 0% 1% 1%;
+    flex-direction: column;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 10px 10px 5px rgba(26, 25, 25, 0.5);
+}
+
+.fondoImgJuegos h3{
+    color: var(--l1_secundario);
+    position: absolute;
+    top:0;
+    font-family: var(--tituloPrincipal);
+}
+
+.imgJuegos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 1px;
+    
+}
+.imgJuegos > img{
+    padding: 18px;
+    
+}
+.caractJuegoyPublic{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    color: var(--l1_secundario);
+    font-family: var(--tituloPrincipal);
+}
+.caractJuegoyPublic >img{
+    margin-left: 1%;
+    margin-right: 2%;
+}
+.caracteristicasJuego{
+    background-color: var(--secundario);
+    width: 100%;
+    height: 590px; 
+    margin: 1% 0.2% 1% 1%;
+    border-radius: 15px;
+    padding: 0.8%;
+    position: relative;
+}
+.caractJuego{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2%;
+    font-size: 30px;
+    padding: 1% 0% 0% 0%;
+    
+}
+.caractJuego button{
+    right: 10%;
+}
+.caractJuego p, .caractJuego h3{
+    padding: 20px;
+}
+.botonCompartir{
+   width: 20%;
+   margin: 0% 0% 0% 13%;
+   cursor: pointer;
+   position: relative;
+   background-color: var(--s2_secundario);
+   color: var(--l1_secundario);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transition: transform 0.2s ease-in-out;
+   font-family: var(--textBotones);
+   font-size: 16px;
+}
+.botonCompartir >svg{
+    padding-right: 3%;
+}
+
+.botonCompartir > span{
+    position: absolute;
+    
+}
+.botonCompartir:hover{
+    background-color: var(--s3_primario);
+    transform: scale(1.04);
+
+}
+.botonCompartir span:nth-child(1){
+    width: 100%;
+    height: 1px;
+    top: 0;
+    left: 0%;
+}
+.botonCompartir span:nth-child(2){
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    right:  0%;
+}
+.botonCompartir span:nth-child(3){
+    width: 1px;
+    height: 100%;
+    bottom: 0%;
+    left: 0;
+}
+.botonCompartir span:nth-child(4){
+    width: 1px;
+    height: 100%;
+    top: 0%;
+    right: 0;
+}
+.botonCompartir:hover span:nth-child(1){
+    left: 0;
+    background-color: var(--neutro);
+}
+.botonCompartir:hover span:nth-child(2){
+    right: 0;
+    background-color: var(--neutro);
+}
+.botonCompartir:hover span:nth-child(3){
+    bottom: 0;
+    background-color: var(--neutro);
+}
+.botonCompartir:hover span:nth-child(4){
+    top: 0;
+    background-color: var(--neutro);
+}
+.cerrarCompartir{
+    position: absolute;
+    top:1%;
+    right: 1%;
+    background: transparent;
+    cursor: pointer;
+}
+.compartirTodo{
+    box-shadow: 3px 3px 3px var(--s1_secundario);
+    border-radius: 15px;
+    height: 290px;
+    width: 30%;
+    opacity: 0;
+    display: flex;
+    background-color: var(--neutro);
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9998;
+    top: 30%;
+    right: 30%;
+}
+.textCompartir{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2%;
+    color: var(--s1_secundario);
+    font-family: var(--tituloPrincipal);
+}
+.textCompartir svg{ 
+    margin: 15% 0% 0% 0%;
+    padding: 2px;
+}
+.inputCompartir{
+    width: 60%;
+    background-color: #2C4918;
+    height: 50px;
+    margin: 5%;
+    border-radius: 10px;
+}
+.linkCompart{
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid var(--s3_primario);
+}
+.linkCompart::placeholder{
+    padding-left: 6%;
+}
+.show1{
+    pointer-events: auto;
+    opacity: 1;
+}
+.copiarLink{
+    width: 30%;
+    height: 30px;
+    border-radius: 10px;
+    border: var(--l3_primario);
+    background-color: var(--l3_primario);
+    margin-bottom: 2%;
+    transition: transform 0.2s;
+    cursor: pointer;
+    font-family: var(--textBotones);
+    font-size: 16px;
+    font-weight: bold;
+}
+.copiarLink:hover{
+    transform: scale(0.9);
+}
+.imgPublic{
+    margin-top: 1.2%;
+}
+.explicacionJuego{
+    margin-top: 2%;
+    font-size: 22px;
+}
+.explicacionJuego > div{
+    margin-top: 3%;
+}
+.seccionComentario{
+    padding: 1%;
+    border: 2px solid var(--neutro);
+}
+.textComent{
+    display: flex;
+    flex-direction: row;
+    
+}
+.seccionComentario{
+    margin-top: 2%;
+    font-family: var(--tituloPrincipal);
+}
+.seccionComentario h2{
+    font-size: 24px;
+}
+.listaComentarios{
+    list-style: none;
+    padding: 0;
+    background-color: var(--l3_secundario);
+    margin: 1%;
+    height: 120px;
+    margin-top: 2%;
+    border-radius: 10px;
+}
+.listaComentarios input::placeholder{
+    padding-left: 2px;
+}
+.nombreUsuario{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2%;
+    padding: 0.7%;
+    margin-bottom: -1%; 
+    padding-left: 12px;
+}
+.nombreUsuario svg{
+    padding-right: 5px;
+}
+input{
+    padding-left: 1%;
+}
+.comentar {
+    border: 0.3px solid var(--s3_secundario);;
+    background-color: var(--neutro);
+    width: 85%;
+    height: 50px;
+    margin: 0% 1% 0% 1%;
+    margin-top: 0.9%;
+    font-family: var(--tituloPrincipal);
+    font-size: 14px;
+}
+.comentPublicado{
+    border: 0.3px solid var(--s3_secundario);
+    background-color: var(--l3_secundario);
+    width: 97%;
+    height: 40px;
+    margin: 0% 1% 0% 1%;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    margin-top: 0.4%;
+    padding-left: 1%;
+}
+.butonComentar{
+    width: 10%;
+    background-color: var(--neutro);
+    height: 30px;
+    cursor: pointer;
+    font-family: var(--textBotones);
+    font-size: 18px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+.butonComentar:hover{
+    background-color: var(--l3_primario);
+}
+.comentPublicado p{
+    padding-right: 2%;
+}
+
+.canvaJuego{
+    
+    position: absolute;
+    display: none;
+
+}
+
+#canvas{
+    background-image: linear-gradient(to bottom, #ff0000, #00ff00); 
+}
+
+
+.playJugar{
+    background-color: var(--s2_primario);
+    border-radius: 20px;
+    width: 600px;
+    height: 530px;
+    position: absolute;
+    top: 340px;  
+    display: none;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    font-family: var(--tituloPrincipal);
+    color: var(--l1_secundario);
+}
+
+.show2{
+    pointer-events: auto;
+    opacity: 1;
+}
+.ocultar{
+    pointer-events: none;
+    opacity: 0;
+}
+.entrar{
+    width: 200px;
+    height: 40px;
+    background-color: var(--l1_primario);
+    font-size: var(--textBotones);
+    border-radius: 50px;
+}
+
+.jugadorElegir{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: space-around;
+    width: 400px;
+    font-size: var(--tituloPrincipal);
+}
+
+.jugadorElegir div {
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    align-items: center;
+}
+
+.jugadorElegir input, .jugadorElegir select{
+    
+    height: 40%;    
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+
+.botonFicha {
+    width: 70px; /* Ajusta el tamaño del botón según tus necesidades */
+    height: 70px; /* Ajusta el tamaño del botón según tus necesidades */
+    border-radius: 50%; /* Hace que el botón tenga forma redonda */
+    border: none; /* Elimina el borde del botón */
+    display: inline-block;
+    cursor: pointer;
+  }
+  .navJuego{
+    display: none;
+    position: absolute;
+    flex-direction: row;
+    z-index: 1;
+    width: 85%;
+    height: 12%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    justify-content: space-around;
+    align-items: center;
+}
+.tiempoTurno{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 18%;
+    font-family: var(--tituloTerciario);
+}
+.menuJuego1{
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    height: 50%;
+    margin-right: 20px;
+
+}
+.menuJuego1 #resetJuego,.menuJuego1 .menuJuego{
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+    justify-content: center;
+    margin: 2%;
+    background-color: var(--s3_secundario);
+    color: var(--l1_secundario);
+    font-family: var(--textBotones);
+  }
+#selectFicha1 , #selectFicha2, #nombreJugador1, #nombreJugador2{
+   height: 70%;
+}
+.elegirDimensiones button{
+    background-color: var(--s3_secundario);
+    color: var(--l1_secundario);
+    font-family: var(--textBotones);
+    cursor: pointer;
+    width: 70px;
+    height: 35px;
+    border-radius: 20px;
+} 
+
+.elegirDimensiones{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    align-items: start;
+}
+
+.elegirDimensiones h1 {
+    font-size:30px ;
+    font-family: var(--tituloPrincipal);
+}
+
+.ganaste{
+    background-color: var(--s3_primario);
+    color: var(--neutro);
+    width: 35%;
+    height: 30%;
+    position: absolute;
+    top: 380px;  
+    left: 32.5%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 15px;
+}
+.ganaste h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--neutro);
+}
+.ganaste button{
+    width: 50%;
+    height: 15%;
+    margin-left: 25%;
+    margin-top: 10%;
+    border-radius: 15px;
+    background-color: var(--primario);
+    color: var(--l1_secundario);
+
+}
+
+.nombresJugadores{
+    display: none;
+    z-index: 1;
+    width: 77%;
+    position: absolute;
+    justify-content: space-between;
+    top: 55%;
+    font-family: var(--tituloTerciario);
+    font-size: 12px;
+}
+
+
+/* Estilos específicos para computadoras */
+@media screen and (min-width: 1024px) {
+   
+    header{
+        width: 98.8%;
+        height: 58px;
+    }
+
+
+    .buscar{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 15px;
+        background-color: var(--neutro);
+        height: 35px;
+        width: 280px;
+    }
+
+    .lupa, .logoMobile, .containerCarrousel-mobile, .footerIcons{
+        display: none;
+    }
+
+    .logoDescktop, .carouselCategorias, .infoFooter, .categoriaFooter, .footerIconsDesktop{
+        display: block;
+    }
+
+    .inputBuscar{
+        margin: 10px;
+        height: 20px;
+        width: 250px;
+    }
+    .logoBuscar{
+        padding-right:3px;
+        margin: 8px;
+        height: 22px;
+    }
+
+    .card a .img-card{
+        height: 80%;
+    }
+
+    #user{
+        top: 58px;
+    }
+
+    .iconosHeader svg{
+        padding-right: 6px;
+        padding-left: 6px;
+    }
+
+    .carousel {
+        width: 99.5%;
+        height: 300px;
+    }
+
+    .carousel h3{
+
+        font-size: 25px;
+    }
+
+    .carousel-container{
+
+        height: 92%;
+    }
+
+    .carouselCategorias h6{
+        font-size: 16px;
+        color: var(--s3_primario);
+    }
+
+    .tituloCategorias{
+        width: 200px;
+    }
+
+    .footer h3 {
+        font-size: 35px;
+    }
+
+    .footer p{
+        font-size: 20px;
+    }
+
+    .footerIconsDesktop svg{
+        padding: 19px;
+    }
+
+
+    .infoFooter{
+        font-size: 28px;
+    }
+
+    .footerLinks div{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .carousel-container2{
+        padding-top: 10px;
+        height: 100%;
+    }
+
+
+
+    .img-card{
+        width: 300px;
+        height: 75%;
+    }
+
+    .text-card{
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around;
+        align-items: center;
+        font-size: 20px;
+        width: 100%;
+        height: 25%;
+    }   
+    .containerCarrousel-mobile{
+        width: 100%;
+    }
+
+    .carouselCategorias{
+        width: 99.7%;
+        height: 175px;
+        border-top: 25px solid var(--neutro);
+        background-color: var(--l1_primario);
+        padding-top: 5px;
+        padding-left: 5px;
+    }
+
+    .cardCategoria{
+        width: 200px;
+        height: 135px;
+        box-shadow: 3px 3px 3px #828B79;
+        background-color: var(--neutro);
+        margin-left: 6px;
+        margin-right: 6px;
+        margin-bottom: 6px;
+        border-radius: 15px; 
+    }
+
+    .card{
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 5px;
+        border-radius: 15px;
+    }
+
+    .img-cardCategoria{
+        width: 200px;
+        height: 70%;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        transition: opacity 0.2s ease-in-out;
+        opacity: 1;
+    }
+    
+    .img-cardCategoria:hover {
+        opacity: 0.8; 
+    }      
+
+    .text-cardCategoria{
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around;
+        align-items: center;
+        height: 30px;
+        font-size: 14px;
+        width: 200px;
+        font-family: var(--tituloTerciario);
+        color: var(--s3_secundario);
+    }
+
+    .footer{
+        height: 400px;
+    }
+
+    #menu {
+        width: 170px;
+    }
+    
+    
+    #menu a {
+        font-size: 18px;
+    }
+
+    @keyframes show {
+        /* Anula la animación estableciendo las propiedades a su valor por defecto */
+        from {
+            opacity: initial;
+            scale: initial;
+        }
+        to {
+            opacity: initial;
+            scale: initial;
+        }
+    }
+
+    
+}
+

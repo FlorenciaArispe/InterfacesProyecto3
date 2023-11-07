@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Registrate</title>
+</head>
+<body class="fondo">
+    <div class="formulario formSignin">
+        <img class="imgForm" src="images/imgRegistro.jpg" alt="imgRegistro">
+        <button class="cancel-button" type="button">
+            <svg fill="none" height="20" viewBox="0 0 48 48" width="20" xmlns="http://www.w3.org/2000/svg">
+            <g clip-rule="evenodd" fill="#797C76" fill-rule="evenodd" stroke="#797C76">
+            <path d="m24 42c9.9411 0 18-8.0589 18-18s-8.0589-18-18-18-18 8.0589-18 18 8.0589 18 18 18zm0 2c11.0457 0 20-8.9543 20-20s-8.9543-20-20-20-20 8.9543-20 20 8.9543 20 20 20z"/><path d="m16.2218 31.7782c-.3906-.3905-.3906-1.0237 0-1.4142l14.1421-14.1422c.3905-.3905 1.0237-.3905 1.4142 0s.3905 1.0237 0 1.4142l-14.1421 14.1422c-.3906.3905-1.0237.3905-1.4142 0z"/><path d="m16.2218 16.2218c.3906-.3905 1.0237-.3905 1.4143 0l14.1421 14.1422c.3905.3905.3905 1.0237 0 1.4142s-1.0237.3905-1.4142 0l-14.1422-14.1422c-.3905-.3905-.3905-1.0237 0-1.4142z"/></g></svg>
+        </button>
+        <form class="textoForm textoFormSignin">
+            <div class="tituloForm">
+                <h2>Crea tu cuenta</h2>
+                <h2>¡ES GRATIS!</h2>
+            </div>
+            <div class="campoCompletar">
+                <label>Nombre y Apellido *</label>
+                <input type="text" name="nombreyapellido" required>        
+            </div>
+            <div class="campoCompletar">
+                <label>NickName</label>
+                <input type="text" name="nickName">        
+            </div>
+            <div class="campoCompletar">
+                <label>Edad *</label>
+                <input type="text" name="edad" required>        
+            </div>
+            <div class="campoCompletar">
+                <label>Email</label>
+                <input type="text" name="email" required>        
+            </div>
+            <div class="campoCompletar">
+                <label>Contraseña</label>
+                <div class="ojoContraseña">
+                    <input type="password" name="contraseña" required>    
+                    <svg class="ojoCerrado" width="16" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.09593 3.06559C7.38445 3.02294 7.68209 3.00006 7.98865 3.00006C11.6128 3.00006 13.991 6.19817 14.79 7.46324C14.8867 7.61636 14.935 7.69292 14.9621 7.811C14.9824 7.89969 14.9824 8.03959 14.962 8.12827C14.935 8.24635 14.8863 8.32342 14.7889 8.47755C14.576 8.81447 14.2515 9.28796 13.8215 9.80149M4.243 4.21761C2.70809 5.25883 1.66605 6.70544 1.18803 7.46215C1.0909 7.61591 1.04233 7.69279 1.01526 7.81087C0.994922 7.89955 0.994914 8.03944 1.01524 8.12812C1.0423 8.24619 1.09064 8.32275 1.18734 8.47585C1.9863 9.74093 4.36446 12.939 7.98865 12.939C9.44997 12.939 10.7087 12.4191 11.743 11.7156M1.5993 1.5802L14.378 14.3589M6.48266 6.46357C6.09725 6.84898 5.85886 7.38143 5.85886 7.96955C5.85886 9.1458 6.8124 10.0993 7.98865 10.0993C8.57677 10.0993 9.10922 9.86095 9.49463 9.47553" stroke="#797C76" stroke-width="1.41986" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg> 
+                    <svg class="ojoAbierto" width="16" height="14" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.26387 8.71318C1.12769 8.49754 1.05959 8.38972 1.02147 8.22342C0.992842 8.0985 0.992842 7.9015 1.02147 7.77658C1.05959 7.61028 1.12769 7.50246 1.26387 7.28682C2.38928 5.50484 5.73915 1 10.8442 1C15.9492 1 19.299 5.50484 20.4244 7.28682C20.5606 7.50246 20.6287 7.61028 20.6668 7.77658C20.6955 7.9015 20.6955 8.0985 20.6668 8.22342C20.6287 8.38972 20.5606 8.49754 20.4244 8.71318C19.299 10.4952 15.9492 15 10.8442 15C5.73915 15 2.38928 10.4952 1.26387 8.71318Z" stroke="#797C76" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10.8442 11C12.501 11 13.8442 9.65685 13.8442 8C13.8442 6.34315 12.501 5 10.8442 5C9.1873 5 7.84415 6.34315 7.84415 8C7.84415 9.65685 9.1873 11 10.8442 11Z" stroke="#797C76" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                                               
+                </div>
+                
+            </div>
+            <div class="campoCompletar">
+                <label>Repetir contraseña *</label>
+                <div class="ojoContraseña">
+                    <input type="password" name="repetirContraseña" required>      
+                    <svg class="ojoCerradoRepet" width="16" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.09593 3.06559C7.38445 3.02294 7.68209 3.00006 7.98865 3.00006C11.6128 3.00006 13.991 6.19817 14.79 7.46324C14.8867 7.61636 14.935 7.69292 14.9621 7.811C14.9824 7.89969 14.9824 8.03959 14.962 8.12827C14.935 8.24635 14.8863 8.32342 14.7889 8.47755C14.576 8.81447 14.2515 9.28796 13.8215 9.80149M4.243 4.21761C2.70809 5.25883 1.66605 6.70544 1.18803 7.46215C1.0909 7.61591 1.04233 7.69279 1.01526 7.81087C0.994922 7.89955 0.994914 8.03944 1.01524 8.12812C1.0423 8.24619 1.09064 8.32275 1.18734 8.47585C1.9863 9.74093 4.36446 12.939 7.98865 12.939C9.44997 12.939 10.7087 12.4191 11.743 11.7156M1.5993 1.5802L14.378 14.3589M6.48266 6.46357C6.09725 6.84898 5.85886 7.38143 5.85886 7.96955C5.85886 9.1458 6.8124 10.0993 7.98865 10.0993C8.57677 10.0993 9.10922 9.86095 9.49463 9.47553" stroke="#797C76" stroke-width="1.41986" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <svg class="ojoAbiertoRepet" width="16" height="14" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.26387 8.71318C1.12769 8.49754 1.05959 8.38972 1.02147 8.22342C0.992842 8.0985 0.992842 7.9015 1.02147 7.77658C1.05959 7.61028 1.12769 7.50246 1.26387 7.28682C2.38928 5.50484 5.73915 1 10.8442 1C15.9492 1 19.299 5.50484 20.4244 7.28682C20.5606 7.50246 20.6287 7.61028 20.6668 7.77658C20.6955 7.9015 20.6955 8.0985 20.6668 8.22342C20.6287 8.38972 20.5606 8.49754 20.4244 8.71318C19.299 10.4952 15.9492 15 10.8442 15C5.73915 15 2.38928 10.4952 1.26387 8.71318Z" stroke="#797C76" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10.8442 11C12.501 11 13.8442 9.65685 13.8442 8C13.8442 6.34315 12.501 5 10.8442 5C9.1873 5 7.84415 6.34315 7.84415 8C7.84415 9.65685 9.1873 11 10.8442 11Z" stroke="#797C76" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                   
+                </div>
+            </div>
+            
+            
+            <!--empieza captcha-->
+            <div class="captcha captchaSignin">
+                <div>
+                    <input type="checkbox">
+                    <p>No soy un robot</p>
+                </div>
+                <img src="images/recaptcha.png" alt="recaptcha" width="35" height="25">
+            </div>
+            <!--termina captcha-->
+            <div>
+                <svg width="194" viewBox="0 0 194 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M94.0106 3.10432V2.97971C94.0106 2.55713 94.072 2.16526 94.1948 1.80408C94.3176 1.43929 94.4946 1.12326 94.7258 0.85599C94.9569 0.585107 95.2368 0.375624 95.5655 0.227542C95.8942 0.0758472 96.2626 0 96.6707 0C97.0824 0 97.4526 0.0758472 97.7813 0.227542C98.1136 0.375624 98.3953 0.585107 98.6265 0.85599C98.8612 1.12326 99.04 1.43929 99.1628 1.80408C99.2856 2.16526 99.347 2.55713 99.347 2.97971V3.10432C99.347 3.52689 99.2856 3.91877 99.1628 4.27995C99.04 4.64113 98.8612 4.95716 98.6265 5.22804C98.3953 5.49531 98.1154 5.70479 97.7867 5.85649C97.4617 6.00457 97.0933 6.07861 96.6815 6.07861C96.2698 6.07861 95.8996 6.00457 95.5709 5.85649C95.2422 5.70479 94.9605 5.49531 94.7258 5.22804C94.4946 4.95716 94.3176 4.64113 94.1948 4.27995C94.072 3.91877 94.0106 3.52689 94.0106 3.10432ZM95.0129 2.97971V3.10432C95.0129 3.39687 95.0472 3.67317 95.1158 3.93322C95.1844 4.18965 95.2874 4.4172 95.4246 4.61584C95.5655 4.81449 95.7407 4.9716 95.9501 5.08718C96.1596 5.19914 96.4034 5.25513 96.6815 5.25513C96.956 5.25513 97.1962 5.19914 97.4021 5.08718C97.6116 4.9716 97.7849 4.81449 97.9222 4.61584C98.0594 4.4172 98.1624 4.18965 98.231 3.93322C98.3032 3.67317 98.3393 3.39687 98.3393 3.10432V2.97971C98.3393 2.69077 98.3032 2.41808 98.231 2.16165C98.1624 1.9016 98.0576 1.67225 97.9168 1.4736C97.7795 1.27134 97.6061 1.11243 97.3967 0.996849C97.1908 0.881272 96.9488 0.823484 96.6707 0.823484C96.3962 0.823484 96.1542 0.881272 95.9447 0.996849C95.7389 1.11243 95.5655 1.27134 95.4246 1.4736C95.2874 1.67225 95.1844 1.9016 95.1158 2.16165C95.0472 2.41808 95.0129 2.69077 95.0129 2.97971Z" fill="black"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M89.6875 3.64074H0V3.05835H89.6875V3.64074Z" fill="black"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M193.352 3.64074H103.665V3.05835H193.352V3.64074Z" fill="black"/>
+                </svg>
+            </div>
+        
+            <button class="sesionCon google">
+                <svg enable-background="new 0 0 48 48" height="15" viewBox="0 0 48 48" width="10" xmlns="http://www.w3.org/2000/svg"><path d="m43.611 20.083h-1.611v-.083h-18v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657c-3.572-3.329-8.35-5.382-13.618-5.382-11.045 0-20 8.955-20 20s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z" fill="#ffc107"/><path d="m6.306 14.691 6.571 4.819c1.778-4.402 6.084-7.51 11.123-7.51 3.059 0 5.842 1.154 7.961 3.039l5.657-5.657c-3.572-3.329-8.35-5.382-13.618-5.382-7.682 0-14.344 4.337-17.694 10.691z" fill="#ff3d00"/><path d="m24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238c-2.008 1.521-4.504 2.43-7.219 2.43-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025c3.31 6.477 10.032 10.921 17.805 10.921z" fill="#4caf50"/><path d="m43.611 20.083h-1.611v-.083h-18v8h11.303c-.792 2.237-2.231 4.166-4.087 5.571.001-.001.002-.001.003-.002l6.19 5.238c-.438.398 6.591-4.807 6.591-14.807 0-1.341-.138-2.65-.389-3.917z" fill="#1976d2"/></svg>
+                REGISTRARSE CON GOOGLE
+            </button>
+            <button class="sesionCon face">
+                <svg width="7" height="9" viewBox="0 0 7 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.72409 2.23316H6.98864V0.0941885C6.37638 0.030522 5.76119 -0.000910933 5.14563 2.00875e-05C3.31607 2.00875e-05 2.06498 1.11659 2.06498 3.16139V4.92368H0V7.31825H2.06498V13.4526H4.54026V7.31825H6.59851L6.90792 4.92368H4.54026V3.39681C4.54026 2.69054 4.7286 2.23316 5.72409 2.23316Z" fill="white"/>
+                </svg>
+                <p>REGISTRARSE CON FACEBOOK</p>
+            </button>
+         
+            
+            <div class="center">
+                <button id="open-popup-btn" class="acceder" value="acceder">Registrar</button>  
+            </div>
+           
+            <div class="linkRegistro">
+                <p>¿Ya tenes cuenta?</p>
+                <a href="login.html">Ingresa ahora</a>
+            </div>
+          
+            
+            
+        </form>
+    </div>
+     <!--ANIMACION POPUP PARA OK REGISTRO-->
+     <div class="popup">
+        <div class="icon">
+            <i class="fa fa-check"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" fill="#4bd37b" r="30"/><path d="m46 14-21 21.6-7-7.2-7 7.2 14 14.4 28-28.8z" fill="#fff"/></svg></i>
+        </div>
+        <div class="title">
+            Bienvenido!
+        </div>
+        <div class="descripcion">
+            <p>Ya tienes tu cuenta de JumpUp. Podras disfrutar de los mejores juegos seleccionados especialmente para vos</p>
+            <p>Toca en Siguiente para iniciar sesion</p>
+        </div>
+        <div class="dismiss-btn">
+            <button id="dismiss-pop">
+              SIGUIENTE
+            </button>
+        </div>
+    </div>
+
+    <script src="js/scriptSignin.js"></script>
+    <script src="js/scriptLogin.js"></script>
+</body>
+</html>
